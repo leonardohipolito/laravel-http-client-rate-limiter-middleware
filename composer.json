@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "leonardohipolito/laravel-http-client-rate-limiter-middleware",
+    "description": "This is my package laravel-http-client-rate-limiter-middleware",
     "keywords": [
-        ":vendor_name",
+        "leonardohipolito",
         "laravel",
-        ":package_slug"
+        "laravel-http-client-rate-limiter-middleware"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/leonardohipolito/laravel-http-client-rate-limiter-middleware",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Leonardo Hipolito",
+            "email": "leonardohipolito.dev@gmail.com",
             "role": "Developer"
         }
     ],
@@ -35,19 +35,19 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "LeonardoHipolito\\LaravelHttpClientRateLimiterMiddleware\\": "src/",
+            "LeonardoHipolito\\LaravelHttpClientRateLimiterMiddleware\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "LeonardoHipolito\\LaravelHttpClientRateLimiterMiddleware\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-laravel-http-client-rate-limiter-middleware --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -72,10 +72,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "LeonardoHipolito\\LaravelHttpClientRateLimiterMiddleware\\LaravelHttpClientRateLimiterMiddlewareServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "LaravelHttpClientRateLimiterMiddleware": "LeonardoHipolito\\LaravelHttpClientRateLimiterMiddleware\\Facades\\LaravelHttpClientRateLimiterMiddleware"
             }
         }
     },
