@@ -21,7 +21,20 @@ composer require leonardohipolito/laravel-http-client-rate-limiter-middleware
 ```
 
 ## Usage
-
+### Laravel 9
+```php
+use GuzzleHttp\Middleware;
+use \LeonardoHipolito\LaravelHttpClientRateLimiterMiddleware\RateLimiterMiddleware;
+use \LeonardoHipolito\LaravelHttpClientRateLimiterMiddleware\CacheStore;
+Http::macro(
+    'jsonPlaceholder',
+    fn () => Http::baseUrl('https://jsonplaceholder.typicode.com')
+        ->withMiddleware(Middleware::mapRequest(RateLimiterMiddleware::perMinute(60, new CacheStore('jsonplaceholder-rate-limit'))))
+        ->acceptJson()
+        ->asJson()
+);
+```
+### Laravel 10
 ```php
 use \LeonardoHipolito\LaravelHttpClientRateLimiterMiddleware\RateLimiterMiddleware;
 use \LeonardoHipolito\LaravelHttpClientRateLimiterMiddleware\CacheStore;
