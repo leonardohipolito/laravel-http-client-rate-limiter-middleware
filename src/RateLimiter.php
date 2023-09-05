@@ -59,7 +59,7 @@ class RateLimiter
             }
         ));
 
-        if (count($requestsInCurrentTimeFrame) < $this->limit) {
+        if ($this->limit > count($requestsInCurrentTimeFrame)) {
             return 0;
         }
 
